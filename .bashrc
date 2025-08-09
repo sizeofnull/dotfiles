@@ -155,3 +155,10 @@ source "$OSH"/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
+#
+export GPG_TTY=$(tty)
+
+alias k=kubectl
+alias kx=kubectx
+
+alias kgn="k get nodes -o custom-columns=NAME:.metadata.name,CAPACITY_TYPE:.metadata.labels.capacity/type,ARCH:.metadata.labels.capacity/arch,OS:.metadata.labels.capacity/os"
